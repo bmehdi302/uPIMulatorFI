@@ -55,7 +55,7 @@ Follow these steps to execute the fault injector successfully:
 ### 7. Calculate the AVF
    - To calculate the Average Vulnerability Factor (AVF), execute the `avf.py` script by specifying the results `.bin` file:
      ```bash
-     python3 avf.py path/to/results_binary
+     python3 avf.py {benchmark_name}_fi_results.bin
      ```
 
 Now you can analyze the fault injection results and calculate the AVF for your benchmarks.
