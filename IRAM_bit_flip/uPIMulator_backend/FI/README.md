@@ -31,6 +31,30 @@ Follow these steps to execute the fault injector successfully:
 ### 2. Modify Fault Injection Parameters
    - Go to the file `../uPIMulator_backend/src/simulator/sram/iram.cc`.
    - Near the end of the IRAM constructor code, modify the `loadFaultparameters(path/to/json_file)` function by specifying the path to your JSON file inside the `FI/` directory.
+   - If you want to use data preparation parameters different from the ones provided in this repository, you'll need to first re-generate your bin files in the frontend directory then perform a normal execution without fault injection to log the accessed addresses:
+
+1. Navigate to the file `src/simulator/sram/iram.cc`.
+2. Uncomment the following lines in the respective sections of the code:
+
+### IRAM Constructor
+Uncomment the lines to open a log file for address logging:
+```cpp
+IRAM::IRAM() {
+  ...
+  // open log file for address logging 
+  // log_file_.open("SCAN-RSS.txt", std::ios::app);
+}
+```
+### IRAM read
+Uncomment the lines to log addresses:
+```cpp
+abi::instruction::Instruction *IRAM::read(Address address) {
+  /*if (log_file_.is_open())
+  {
+    log_file_ << std::dec << address << std::endl;
+  }*/
+}
+```
 
 ### 3. Rebuild the uPIMulator
    - After making the modification, execute the following command to rebuild the uPIMulator and generate the new executable:
