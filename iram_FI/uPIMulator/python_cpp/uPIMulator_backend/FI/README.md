@@ -11,7 +11,7 @@ Follow these steps to execute the fault injector successfully:
    - To replicate the results from this work, use the following configuration for the uPIMulator:
      - `num_dpus=1`
      - `num_tasklets=16`
-     - The following benchmarks and corresponding sizes should be used:
+     - The following benchmarks and corresponding sizes were used:
 
 | Benchmark           | data prep param|
 |---------------------|-----------|
@@ -26,6 +26,7 @@ Follow these steps to execute the fault injector successfully:
 | TRNS                | 64        |
 | SCAN-SSA            | 64        |
 | SCAN-RSS            | 1024      |
+
 
 ### 2. Modify Fault Injection Parameters
    - Go to the file `../uPIMulator_backend/src/simulator/sram/iram.cc`.
