@@ -8,13 +8,13 @@ This repository contains the `uPIMulator_backend/` directory of the uPIMulator. 
 - **`FI/`**: This directory contains:
   - Injection scripts for fault injection experiments.
   - Modifications to the following files to support fault injection models:
-    For IRAM:
+  - For IRAM:
     - `uPIMulator_backend/src/simulator/sram/iram.cc`
     - `uPIMulator_backend/src/simulator/sram/iram.h`
-    For WRAM:
+  - For WRAM:
     - `uPIMulator_backend/src/simulator/sram/wram.cc`
     - `uPIMulator_backend/src/simulator/sram/wram.h`
-    For MRAM:
+  - For MRAM:
     - `uPIMulator_backend/src/simulator/dram/mram.cc`
     - `uPIMulator_backend/src/simulator/dram/mram.h`
    
