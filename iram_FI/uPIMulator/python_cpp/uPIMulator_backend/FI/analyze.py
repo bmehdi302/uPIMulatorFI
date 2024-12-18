@@ -1,5 +1,7 @@
-# Analyze the results of the fault injection
 def analyze_fault_injection_results(log_file_path):
+    """
+    Analyze the results of the fault injection
+    """
     with open(log_file_path, "r") as file:
         lines = file.readlines()
 
