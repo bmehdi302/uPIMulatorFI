@@ -1,6 +1,6 @@
 # Fault Injector Execution Guide
 
-This repository contains the fault injector for the uPIMulator IRAM memory. Below are the steps to execute the fault injector and generate the desired results.
+This repository contains the fault injector for the uPIMulator IRAM memory. Below are the steps to execute the fault injector and generate the desired results. The IRAM bit flip fault model is defined in `../uPIMulator_backend/src/simulator/sram/iram.cc`
 
 ## How to Execute the Fault Injector
 
@@ -13,7 +13,7 @@ Follow these steps to execute the fault injector successfully:
      - `num_tasklets=16`
      - The following benchmarks and corresponding sizes should be used:
 
-| Benchmark Name      | Size (MB) |
+| Benchmark           | data prep param|
 |---------------------|-----------|
 | VA                  | 1024      |
 | HST-S               | 1024      |
@@ -28,7 +28,7 @@ Follow these steps to execute the fault injector successfully:
 | SCAN-RSS            | 1024      |
 
 ### 2. Modify Fault Injection Parameters
-   - Go to the file `uPIMulator_backend/src/simulator/sram/iram.cc`.
+   - Go to the file `../uPIMulator_backend/src/simulator/sram/iram.cc`.
    - Near the end of the IRAM constructor code, modify the `loadFaultparameters(path/to/json_file)` function by specifying the path to your JSON file inside the `FI/` directory.
 
 ### 3. Rebuild the uPIMulator
