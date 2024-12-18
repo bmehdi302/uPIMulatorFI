@@ -53,6 +53,7 @@ abi::instruction::Instruction *IRAM::read(Address address) {
   {
     log_file_ << std::dec << address << std::endl;
   }*/
+...
 }
 ```
 
