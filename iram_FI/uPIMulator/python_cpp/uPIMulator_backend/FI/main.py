@@ -8,7 +8,7 @@ from set_params import set_fi_parameters
 from log import log_injection_run
 from get_diff import get_differences_from_log
 
-# Get unique addresses from mram.txt file
+# Get unique addresses from iram addresses file
 def get_unique_addresses(filename):
     with open(filename, "r") as file:
         addresses = {int(line.strip()) for line in file}  
