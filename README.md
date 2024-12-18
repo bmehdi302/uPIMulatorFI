@@ -12,7 +12,3 @@ This repository contains the `uPIMulator_backend/` directory of the uPIMulator. 
     - `uPIMulator_backend/src/simulator/sram/iram.h`
 
 These changes enable the integration of fault injection models into the uPIMulator framework.
-
-## How to Use
-
-Refer to the [Fault Injector Execution Guide](./README.md) for detailed steps on how to execute fault injection experiments, rebuild the uPIMulator, and analyze the results.
