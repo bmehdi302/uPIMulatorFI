@@ -2,6 +2,9 @@ import re
 
 def get_differences_from_log(log_file):
     differences = 0  # Default value if not found
+    """
+    Get number of differences from execution output log file
+    """
 
     with open(log_file, 'r') as infile:
         for line in infile:
