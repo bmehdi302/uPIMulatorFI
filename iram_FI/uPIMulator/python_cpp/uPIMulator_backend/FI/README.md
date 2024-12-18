@@ -51,7 +51,7 @@ Follow these steps to execute the fault injector successfully:
      - `timeout`: The execution timeout value.
 
 ### 6. Review Execution Outputs
-   - After all executions finish, you will find the execution outputs as well as a final report called `{benchmark_name}_fi_results.bin`. This file contains all the injection results.
+   - After all executions finish, you will find the execution outputs named '{benchmark_name}_{i}.bin', with i being the injection index. You'll also find a final report called `{benchmark_name}_fi_results.bin`. This file contains all the injection results.
 
 ### 7. Calculate the AVF
    - To calculate the Average Vulnerability Factor (AVF), execute the `avf.py` script by specifying the results `.bin` file:
