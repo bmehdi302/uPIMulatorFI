@@ -7,37 +7,8 @@ from run_simulator_fi import execute_fault_injection_process
 from set_params import set_fi_parameters
 from log import log_injection_run
 from get_diff import get_differences_from_log
-
-# Get unique addresses from iram addresses file
-def get_unique_addresses(filename):
-    with open(filename, "r") as file:
-        addresses = {int(line.strip()) for line in file}  
-    return list(addresses)
-
-# Analyze the results of the fault injection
-def analyze_fault_injection_results(log_file_path):
-    with open(log_file_path, "r") as file:
-        lines = file.readlines()
-
-    completed = 0
-    errors = 0
-    crashes = 0
-    timeouts = 0
-
-    for line in lines:
-        if "Result: completed" in line:
-            completed += 1
-        elif "Result: error" in line:
-            errors += 1
-        elif "Result: crash" in line:
-            crashes += 1
-        elif "Result: timeout" in line:
-            timeouts+=1
-
-    print(f"Total Completed: {completed}")
-    print(f"Total Errors: {errors}")
-    print(f"Total Crashes: {crashes}")
-    print(f"Total timeouts: {timeouts}")
+from analyze import analyze_fault_injection_results
+from get_addresses import get_unique_addresses
 
 def main(benchmark_name):
     directory = "."
