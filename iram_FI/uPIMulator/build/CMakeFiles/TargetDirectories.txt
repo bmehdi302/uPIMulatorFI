@@ -1,5 +1,0 @@
-/home/mehdi/workspace/uPIMulator/build/CMakeFiles/edit_cache.dir
-/home/mehdi/workspace/uPIMulator/build/CMakeFiles/rebuild_cache.dir
-/home/mehdi/workspace/uPIMulator/build/src/CMakeFiles/uPIMulator.dir
-/home/mehdi/workspace/uPIMulator/build/src/CMakeFiles/edit_cache.dir
-/home/mehdi/workspace/uPIMulator/build/src/CMakeFiles/rebuild_cache.dir

@@ -1,5 +1,0 @@
-/home/mehdi/workspace/uPIMulator/tools/upmem_profiler/build/CMakeFiles/edit_cache.dir
-/home/mehdi/workspace/uPIMulator/tools/upmem_profiler/build/CMakeFiles/rebuild_cache.dir
-/home/mehdi/workspace/uPIMulator/tools/upmem_profiler/build/src/CMakeFiles/upmem_profiler.dir
-/home/mehdi/workspace/uPIMulator/tools/upmem_profiler/build/src/CMakeFiles/edit_cache.dir
-/home/mehdi/workspace/uPIMulator/tools/upmem_profiler/build/src/CMakeFiles/rebuild_cache.dir
