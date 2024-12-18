@@ -1,4 +1,4 @@
-# Fault Injector Execution Guide
+# Fault Injector Execution 
 
 This repository contains the fault injector for the uPIMulator IRAM memory. Below are the steps to execute the fault injector and generate the desired results. The IRAM bit flip fault model is defined in `../uPIMulator_backend/src/simulator/sram/iram.cc`
 
