@@ -15,8 +15,8 @@ This repository contains the `uPIMulator_backend/` directory of the uPIMulator. 
     - `uPIMulator_backend/src/simulator/sram/wram.cc`
     - `uPIMulator_backend/src/simulator/sram/wram.h`
     For MRAM:
-    - `uPIMulator_backend/src/simulator/sram/mram.cc`
-    - `uPIMulator_backend/src/simulator/sram/mram.h`
+    - `uPIMulator_backend/src/simulator/dram/mram.cc`
+    - `uPIMulator_backend/src/simulator/dram/mram.h`
    
   - The file `uPIMulator_backend/src/simulator/cpu/schedthread.cc` is modified to print the differences between golden outputs and Fault injections outputs.
 
