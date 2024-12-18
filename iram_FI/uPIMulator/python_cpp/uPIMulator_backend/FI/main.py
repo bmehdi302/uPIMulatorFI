@@ -51,7 +51,7 @@ def main(benchmark_name):
             print(f"Error deleting {file_path}: {e}")
     
     start_time = time.time()
-    # Load addresses from benchmark file
+    # Load addresses from benchmark file, adapt the path to your FI/iram_accesses/ directory
     iram_addr = get_unique_addresses(f"/home/ebelhadd/iram_tests/{benchmark_name}/uPIMulator/python_cpp/uPIMulator_backend/FI/iram_accesses/{benchmark_name}.txt")
     results_log_path = f"{benchmark_name}_fi_results.bin" #contains final results for all injections
     num_of_faults = 1000            #number of injections
@@ -64,7 +64,7 @@ def main(benchmark_name):
         set_fi_parameters(address, bit_position, byte)
         #log each run output to analyze
         log_filename = f"{benchmark_name}_{i}.bin"
-        #command to run the simulator
+        #command to run the simulator (adapt the path/to/your executable) & path/to/your/frontend) 
         command = (
             f"/home/ebelhadd/iram_tests/{benchmark_name}/uPIMulator/python_cpp/uPIMulator_backend/build/src/uPIMulator "
             f"--benchmark {benchmark_name} --num_tasklets 16 "
