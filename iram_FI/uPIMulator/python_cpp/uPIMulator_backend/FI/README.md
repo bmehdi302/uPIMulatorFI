@@ -29,7 +29,7 @@ Follow these steps to execute the fault injector successfully:
 
 ### 2. Modify Fault Injection Parameters
    - Go to the file `uPIMulator_backend/src/simulator/sram/iram.cc`.
-   - Modify the `loadFaultparameters(path/to/json_file)` function by specifying the path to your JSON file inside the `FI/` directory.
+   - Near the end of the IRAM constructor code, modify the `loadFaultparameters(path/to/json_file)` function by specifying the path to your JSON file inside the `FI/` directory.
 
 ### 3. Rebuild the uPIMulator
    - After making the modification, execute the following command to rebuild the uPIMulator and generate the new executable:
