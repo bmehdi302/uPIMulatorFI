@@ -1,1 +1,1 @@
-{"fault_injection_enabled": true, "fault_address": 1591296, "fault_byte": 982, "fault_bit_position": 2, "launch_address": 1588224, "stuck_bit": 0}
+{"fault_injection_enabled": true, "fault_address": 1591296, "fault_byte": 982, "fault_bit_position": 2, "launch_address": 1588224, "stuck_bit": 1}
