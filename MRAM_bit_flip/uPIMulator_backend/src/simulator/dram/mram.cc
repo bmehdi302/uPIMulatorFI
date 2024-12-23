@@ -90,7 +90,7 @@ void MRAM::inject_bit_flip(Address address) {
 
 std::vector<int> MRAM::read(Address address) {
   address_access_count_[address]++;
-  if(address_access_count_[launch_address_]>=2){  //The cpu::launch starts from the second access to launch_address_
+  if(address_access_count_[launch_address_]>=2){  //The cpu::launch starts from the second access to launch_address_, except for RED(3rd) and TRNS(5th) (with our data prep param)
     if(fault_injection_enabled_ && address == fault_address_){
       inject_bit_flip(address);
     }
