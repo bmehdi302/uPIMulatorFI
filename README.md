@@ -80,10 +80,10 @@ The benchmarks and their corresponding data preparation parameters are:
   - Perform a normal execution without fault injection to log accessed addresses:
     1. Uncomment the following lines in the respective `.cc` file:
        ```cpp
-       IRAM::IRAM() {
+       ...
          // Open log file for address logging
          // log_file_.open("SCAN-RSS.txt", std::ios::app);
-       }
+    
        ...
        if (log_file_.is_open()) {
          log_file_ << std::dec << address << std::endl;
