@@ -107,21 +107,31 @@ sh ../script/build.sh
      Choose the name of the benchmark you want to execute from the list above.
 
 ### 5. Modify Injection Parameters
-   - Inside `main.py`, you can modify the following parameters:
-     - `num_faults`: The number of fault injections.
-     - `timeout`: The execution timeout value.
-    You can modify which addresses you're targeting as well. For MRAM, we targeted only addresses where input and output are available/written. For WRAM and IRAM, all the addresses were collected.
+Inside `main.py`, you can modify the following parameters:
+
+- **`num_faults`**: Specifies the number of fault injections.  
+- **`timeout`**: Sets the execution timeout value.
+
+You can also modify which memory addresses to target:  
+- **MRAM**: Target only addresses where input and output are available or written.  
+- **WRAM and IRAM**: All collected addresses are targeted.
+
+---
 
 ### 6. Review Execution Outputs
-   - After all executions finish, you will find the execution outputs named `{benchmark_name}_{i}.bin`, with i being the injection index. You'll also find a final report called `{benchmark_name}_fi_results.bin`. This file contains all the injection results.
+After all executions are completed, you will find the following outputs:
+
+- **Fault Injection Outputs**: Files named `{benchmark_name}_{i}.bin`, where `i` is the injection index.  
+- **Final Report**: A summary file named `{benchmark_name}_fi_results.bin`, which contains all the injection results.
+
+---
 
 ### 7. Calculate the AVF
-   - To calculate the Average Vulnerability Factor (AVF), execute the `avf.py` script by specifying the results `.bin` file:
-     ```bash
-     python3 avf.py {benchmark_name}_fi_results.bin
-     ```
+To compute the Average Vulnerability Factor (AVF), use the `avf.py` script. Run the following command, specifying the results `.bin` file:
 
-Now you can analyze the fault injection results and calculate the AVF for your benchmarks.
+```bash
+python3 avf.py {benchmark_name}_fi_results.bin
+
 
 
 
