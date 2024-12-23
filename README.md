@@ -131,6 +131,7 @@ To compute the Average Vulnerability Factor (AVF), use the `avf.py` script. Run 
 
 ```bash
 python3 avf.py {benchmark_name}_fi_results.bin
+```
 
 
 
