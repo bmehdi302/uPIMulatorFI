@@ -23,7 +23,7 @@ void SchedThread::sched(int execution) {
 
 void SchedThread::check(int execution) {
   dma_transfer_output_dpu_mram_heap_pointer_name(execution);
-  //dma_transfer_dpu_results(execution);
+  //dma_transfer_dpu_results(execution); //Uncomment for TS and RED 
 
   std::cout << "check " << execution << " completed..." << std::endl;
 }
@@ -125,17 +125,13 @@ void SchedThread::dma_transfer_output_dpu_mram_heap_pointer_name(
 
       /*for (int i = 0; i < byte_stream->size(); i++) {
         assert(byte_stream->byte(i) == mram_byte_stream->byte(i));
-	    }*/
-    //SKIP CHECKING BINARY OUTPUT compared to MRAM OUTPUT when fault is injected
-    //print mram output
+	}*/ //SKIP CHECKING binary output compared to simulation output when fault is injected
+    
       int diff_count = 0;  // Initialize counter for differing elements
 
       for (int i = 0; i < byte_stream->size(); i++) {
           int output_byte = mram_byte_stream->byte(i);
           int golden_byte = byte_stream->byte(i);
-
-          /*std::cout << std::dec << "output_byte : " << output_byte
-                    << " golden_byte: " << golden_byte << std::endl;*/
 
           // Check if the bytes differ
           if (output_byte != golden_byte) {
@@ -187,15 +183,12 @@ void SchedThread::dma_transfer_dpu_results(int execution) {
       
       /*for (int i = 0; i < byte_stream->size(); i++) {
         assert(byte_stream->byte(i) == wram_byte_stream->byte(i));
-      }*/
+      }*/ //SKIP CHECKING binary output compared to simulation output when fault is injected
 
       int diff_count = 0;  // Initialize counter for differing elements
       for (int i = 0; i < byte_stream->size(); i++) {
           int output_byte = wram_byte_stream->byte(i);
           int golden_byte = byte_stream->byte(i);
-
-          /*std::cout << std::dec << "output_byte : " << output_byte
-                    << " golden_byte: " << golden_byte << std::endl;*/
 
           // Check if the bytes differ
           if (output_byte != golden_byte) {
